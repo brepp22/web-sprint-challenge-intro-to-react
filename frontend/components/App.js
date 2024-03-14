@@ -7,7 +7,7 @@ const urlPeople = 'http://localhost:9009/api/people'
 
 function App() {
   const [people, setPeople] = useState([])
-  const [homeworld, setPlanet] = useState([])
+  const [planet, setPlanet] = useState([])
  
   // ❗ Create state to hold the data from the API
   // ❗ Create effects to fetch the data and put it in state
@@ -41,9 +41,9 @@ function App() {
       <p>See the README of the project for instructions on completing this challenge</p>
       
 
-      {people.map((character, index) => (
+      {people.map((character) => (
       <div className='character-card' key={character.id}>
-        <Character key={character.id} character={character} homeworld ={homeworld.find(hw => hw.id === character.homeworld)} />
+        <Character key={character.id} character={character} planet ={planet.find(p => p.id === character.homeworld)} />
       </div>
     ))}
         
