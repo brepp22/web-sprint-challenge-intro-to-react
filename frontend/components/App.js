@@ -42,9 +42,9 @@ function App() {
       
 
       {people.map((character) => (
-      <div className='character-card' key={character.id}>
+      
         <Character key={character.id} character={character} planet ={planet.find(p => p.id === character.homeworld)} />
-      </div>
+      
     ))}
         
        

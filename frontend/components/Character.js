@@ -13,8 +13,9 @@ function Character(props) { // ❗ Add the props
 
   
   return (
-  <div>
-<h3 className = 'character-name' onClick = {togglePlanet}>
+  
+    <div className = 'character-card' onClick = {togglePlanet}> 
+<h3 className = 'character-name' >
     {character.name}
   </h3>
   { showPlanet && (( 
@@ -22,8 +23,8 @@ function Character(props) { // ❗ Add the props
   </p> 
   
   ))}
+ 
   </div>
-  
   )
 }
 export default Character
